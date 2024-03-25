@@ -1,9 +1,9 @@
 # Mohammad_Khan_21169
 
-##Description
+## Description
 This repository contains the assignment for the Deep Learning courses 316 and 616.
 
-##Installation Instructions
+## Installation Instructions
 '''bash
 mkdir dl_assign
 
