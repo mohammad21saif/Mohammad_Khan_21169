@@ -4,7 +4,6 @@ import numpy as np
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
-import os
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -85,7 +84,7 @@ def train_and_evaluate(model, train_loader, test_loader):
 #Saving the model
 def save_model(model, model_name):
     print(f'Saving the model {model_name}')
-    torch.save(model.state_dict(), f'{model_name}.pt')
+    torch.save(model.state_dict(), f'./SavedModels/{model_name}.pt')
 
 
 def choose_model():

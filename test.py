@@ -1,4 +1,3 @@
-# Import necessary libraries
 import torch
 import torchvision.transforms as transforms
 from torchvision.datasets import SVHN
@@ -84,7 +83,7 @@ def train_and_evaluate(model, train_loader, test_loader):
 #Saving the model
 def save_model(model, model_name):
     print(f'Saving the model {model_name}')
-    torch.save(model.state_dict(), f'{model_name}.pt')
+    torch.save(model.state_dict(), f'./SavedModels/{model_name}.pt')
 
 
 # Choose model
