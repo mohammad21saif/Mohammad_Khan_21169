@@ -33,7 +33,7 @@ train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 
 
-# Modify and return models
+# Get the modified model
 def get_modified_model(model_name):
     print(f"Loading {model_name}")
     if model_name == 'alexnet':
@@ -55,7 +55,7 @@ def get_modified_model(model_name):
 def train_and_evaluate(model, train_loader, test_loader):
     print('Training and Evaluating the model')
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    optimizer = optim.Adam(model.parameters(), lr=0.003)
     for epoch in range(10):
         model.train()
         running_loss = 0.0
@@ -81,6 +81,11 @@ def train_and_evaluate(model, train_loader, test_loader):
                 correct += (predicted == labels).sum().item()
         print(f'Accuracy of the network on the test images: {100 * correct // total} %')
 
+#Saving the model
+def save_model(model, model_name):
+    print(f'Saving the model {model_name}')
+    torch.save(model.state_dict(), f'{model_name}.pt')
+
 
 # Choose model
 def choose_model():
@@ -90,5 +95,7 @@ def choose_model():
         print(f"Training and evaluating {model_name}")
         model = get_modified_model(model_name)
         train_and_evaluate(model, train_loader, test_loader)
+        save_model(model, model_name)
         print('Finished Training and Evaluating the model')
         print('-------------------------------------')
+# choose_model()

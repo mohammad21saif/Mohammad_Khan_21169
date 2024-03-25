@@ -17,7 +17,7 @@ transform = transforms.Compose([
 ])
 
 
-# Adjusted LeNet-5 for SVHN (3-channel images)
+# Adjusted LeNet-5 for SVHN
 class LeNet5(nn.Module):
     def __init__(self):
         super(LeNet5, self).__init__()
@@ -38,8 +38,7 @@ class LeNet5(nn.Module):
         x = self.fc3(x)
         return x
 
-
-train_dataset = datasets.SVHN(root='./data', split='train', download=True, transform=transform)
+train_dataset = datasets.SVHN(root='/home/moonlab/dl_assign/data', split='train', download=True, transform=transform)
 #create subset
 subset_indices = np.random.choice(len(train_dataset), len(train_dataset) // 4, replace=False)
 dataset_subset = torch.utils.data.Subset(train_dataset, subset_indices) 
@@ -56,7 +55,7 @@ test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 def train_and_evaluate(model, train_loader, test_loader):
     print('Training and Evaluating the model')
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+    optimizer = optim.SGD(model.parameters(), lr=0.003, momentum=0.9)
     for epoch in range(10):
         model.train()
         running_loss = 0.0
@@ -83,12 +82,19 @@ def train_and_evaluate(model, train_loader, test_loader):
         print(f'Accuracy of the network on the test images: {100 * correct // total} %')
 
 
+#Saving the model
+def save_model(model, model_name):
+    print(f'Saving the model {model_name}')
+    torch.save(model.state_dict(), f'{model_name}.pt')
+
+
 def choose_model():
     print('------------------------------------------')
     print('Training LeNet-5 on SVHN dataset')
     model = LeNet5().to(device)
     train_and_evaluate(model, train_loader, test_loader)
+    save_model(model, 'lenet_svhn')
     print('Finished Training and Evaluating the model')
     print('------------------------------------------')
 
-choose_model()
+# choose_model()
