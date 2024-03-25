@@ -87,7 +87,6 @@ def save_model(model, model_name):
     torch.save(model.state_dict(), f'./SavedModels/{model_name}.pt')
 
 
-# Choose model
 def choose_model():
     model_names = ['alexnet', 'vgg16', 'resnet18', 'resnet50', 'resnet101']
     for model_name in model_names:
