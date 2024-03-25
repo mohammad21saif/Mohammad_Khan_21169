@@ -94,7 +94,7 @@ def choose_model():
     print('Training LeNet-5 on SVHN dataset')
     model = LeNet5().to(device)
     train_and_evaluate(model, train_loader, test_loader)
-    save_model(model, 'lenet_svhn')
+    # save_model(model, 'lenet_svhn')
     print('Finished Training and Evaluating the model')
     print('------------------------------------------')
 

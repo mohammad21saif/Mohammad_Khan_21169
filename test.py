@@ -94,7 +94,7 @@ def choose_model():
         print(f"Training and evaluating {model_name}")
         model = get_modified_model(model_name)
         train_and_evaluate(model, train_loader, test_loader)
-        save_model(model, model_name)
+        # save_model(model, model_name)
         print('Finished Training and Evaluating the model')
         print('-------------------------------------')
 # choose_model()
