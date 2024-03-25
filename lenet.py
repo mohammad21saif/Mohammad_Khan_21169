@@ -37,6 +37,8 @@ class LeNet5(nn.Module):
         x = self.fc3(x)
         return x
 
+# Load the SVHN dataset
+#Change the root path
 train_dataset = datasets.SVHN(root='/home/moonlab/dl_assign/data', split='train', download=True, transform=transform)
 #create subset
 subset_indices = np.random.choice(len(train_dataset), len(train_dataset) // 4, replace=False)

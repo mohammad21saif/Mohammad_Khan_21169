@@ -20,6 +20,7 @@ transform = transforms.Compose([
 
 
 # Load the SVHN dataset
+#Change the root path
 full_dataset = SVHN(root='/home/moonlab/dl_assign/data', split='train', transform=transform, download=True)
 subset_indices = np.random.choice(len(full_dataset), len(full_dataset) // 4, replace=False)
 dataset_subset = Subset(full_dataset, subset_indices)
