@@ -1,7 +1,7 @@
 # Mohammad_Khan_21169
 
 ## Description
-This repository contains the assignment for the Deep Learning courses 316 and 616.
+This repository contains the assignment for the Deep Learning courses 316 and 616. Performance of LeNet-5, VGG, AlexNet and ResNet(18, 50, 101) is compared on SVHN dataset.
 
 ## Instructions
 Follow these steps to set up the environment for the assignments:
