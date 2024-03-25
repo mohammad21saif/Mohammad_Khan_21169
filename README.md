@@ -3,14 +3,10 @@
 ## Description
 This repository contains the assignment for the Deep Learning courses 316 and 616.
 
-## Installation Instructions
+## Instructions
 Follow these steps to set up the environment for the assignments:
 
 ```bash
-# Create a directory for the assignment and enter it
-mkdir dl_assign
-cd dl_assign
-
 # Clone the repository
 git clone https://github.com/mohammad21saif/Mohammad_Khan_21169.git
 
@@ -25,3 +21,6 @@ source .venv/bin/activate
 
 # Install the required dependencies
 pip3 install -r requirements.txt
+
+#Run the code
+python3 main.py
