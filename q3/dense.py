@@ -22,7 +22,7 @@ train_labels = to_categorical(train_labels)
 test_labels = to_categorical(test_labels)
 
 
-def build_model(hidden_layers=1, units=512, learning_rate=0.001, dropout_rate=0.0, activation='relu'):
+def build_model(hidden_layers, units, learning_rate, dropout_rate, activation):
     model = Sequential()
     model.add(Dense(units, activation=activation, input_shape=(784,)))
     model.add(Dropout(dropout_rate))
