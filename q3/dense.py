@@ -26,22 +26,19 @@ def build_model(hidden_layers=1, units=512, learning_rate=0.001, dropout_rate=0.
     model = Sequential()
     model.add(Dense(units, activation=activation, input_shape=(784,)))
     model.add(Dropout(dropout_rate))
-    
     for _ in range(hidden_layers - 1):
         model.add(Dense(units, activation=activation))
         model.add(Dropout(dropout_rate))
-    
     model.add(Dense(10, activation='softmax'))
-    
     optimizer = Adam(learning_rate=learning_rate)
     model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
 #Trying out parameters
 parameters = {
-    'hidden_layers': [1, 2, 3],
-    'units': [512],
-    'learning_rate': [0.001, 0.0001],
+    'hidden_layers': [1, 2],
+    'units': [128, 256, 512],
+    'learning_rate': [0.001, 0.003],
     'dropout_rate': [0.0, 0.2],
     'activation': ['relu', 'tanh']
 }
