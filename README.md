@@ -1,4 +1,4 @@
-# Deep Learning Assignments - Mohammad Khan 21169
+# Deep Learning Assignment - Mohammad Khan 21169
 
 Welcome to the GitHub repository for Deep Learning course assignments 316 and 616, created by Mohammad Khan (student ID: 21169). This repository contains the necessary code and instructions for completing the assignments for these courses.
 
