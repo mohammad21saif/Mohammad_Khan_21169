@@ -74,6 +74,7 @@ Follow these steps to set up your environment:
     ```
 
 ## Additional Instructions
+IMPORTANT: Replace the path name in `lenet.py` and `others_pretrained.py` before running the codes.
 
 ### Saving Models
 
