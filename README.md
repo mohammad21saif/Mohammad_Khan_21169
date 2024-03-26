@@ -24,7 +24,7 @@ pip3 install -r requirements.txt
 
 #Run the code of question-4
 python3 ./q4/main.py
+```
 
-
-####Further Instructions
+##Further Instructions
 Make a directory named SavedModels and uncomment code from the lenet.py and others_pretrained.py if you want to save model
