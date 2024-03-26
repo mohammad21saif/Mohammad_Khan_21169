@@ -39,7 +39,7 @@ class LeNet5(nn.Module):
 
 # Load the SVHN dataset
 #Change the root path
-train_dataset = datasets.SVHN(root='/home/moonlab/dl_assign/data', split='train', download=True, transform=transform)
+train_dataset = datasets.SVHN(root='path', split='train', download=True, transform=transform)
 #create subset
 subset_indices = np.random.choice(len(train_dataset), len(train_dataset) // 4, replace=False)
 dataset_subset = torch.utils.data.Subset(train_dataset, subset_indices) 
