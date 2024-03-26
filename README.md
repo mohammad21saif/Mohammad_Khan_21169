@@ -1,6 +1,6 @@
 # Deep Learning Assignment - Mohammad Khan 21169
 
-Welcome to the GitHub repository for Deep Learning course assignment 316 and 616, created by Mohammad Saifullah Khan, Roll no. 21169.
+Welcome to the GitHub repository for Deep Learning course assignment 316, created by Mohammad Saifullah Khan, Roll no. 21169.
 
 ## Getting Started
 
